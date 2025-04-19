@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link, Links, } from 'react-router';
 
-    const Links = <>
-        <ul className='flex gap-4 text-lg font-bold text-green-400'>
-        <li>Home</li>
-        <li>About Book</li>
-        <li>Listed Books</li>
-        <li>Page to Reads</li>
-        </ul>
-    </>
+    
 
 const Navbar = () => {
+  const Links = <>
+        <ul className='flex gap-4 text-lg font-bold text-green-400'>
+       <Link to={'/'}><li>Home</li></Link>
+       <Link to={'/about'}><li>About Book</li></Link>
+       <Link to={'/listedBook'}><li>Listed Books</li></Link>
+       <Link to={'/pageToReads'}><li>Page to Reads</li></Link>
+        </ul>
+    </>
     return (
         <div className='mb-10'>
            <div className="navbar bg-base-100 shadow-sm">
